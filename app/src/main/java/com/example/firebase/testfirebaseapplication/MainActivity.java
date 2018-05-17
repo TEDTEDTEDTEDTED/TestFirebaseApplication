@@ -1,5 +1,6 @@
 package com.example.firebase.testfirebaseapplication;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MyActivity";
+    //private static final String TAG = "MyActivity";
 
     private EditText edmovie;
     private  EditText edcity;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
        // String cdate = edDate.getText().toString();
 
 
+
     //    edmovie = (EditText) findViewById(R.id.);
      //   edcity = (EditText) findViewById(R.id.passwd);
      //   edtheater = (EditText) findViewById(R.id.userid);
@@ -50,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
     }
 
     public void add(View v) {
+
+
          String edMovie = edmovie.getText().toString();
          String edCity=  edcity.getText().toString();
          String edTheater = edtheater.getText().toString();
@@ -91,11 +93,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
         }
+    public void query(View v){
 
+
+        Intent intent = new Intent(this,MovieListActivity.class);
+        startActivity(intent);
+
+
+
+
+    }
 
 
    }
